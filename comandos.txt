@@ -1,0 +1,23 @@
+Nome: Rafael Avelino dos Santos
+
+
+mkdir atividade-git
+cd atividade-git
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead .
+echo "Linha inicial na branch main" > texto.txt
+git add texto.txt
+git commit -m "Adiciona texto.txt na main"
+git checkout -b feature-1
+echo "Modificação na feature-1" >> texto.txt
+git add texto.txt
+git commit -m "Modificadodo texto.txt na feature-1"
+git checkout main
+echo "Modificação na main" >> texto.txt
+git add texto.txt
+git commit -m "Modificado texto.txt na main"
+git merge feature-1
+vim texto.txt
+git add texto.txt
+git commit -m "Resolvido conflito entre main e feature-1"
+git checkout -b "add-comandos"
+vim comandos.txt
